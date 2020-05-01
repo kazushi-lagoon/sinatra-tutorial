@@ -1,0 +1,14 @@
+<h1>Users Page</h1>
+
+<table>
+  <tr>
+    <th>名前</th>
+    <th>メール</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><a href="/users/<%= user['id'] %>"><%= user['name'] %></a></td>
+      <td><%= user['email'] %></td>
+    </tr>
+  <% end%>
+</table>

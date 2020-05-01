@@ -1,0 +1,26 @@
+<h1>sinatra-tutorial</h1>
+<img src="/images/button_on.jpg">
+<p> Here is design page <%= @user %></p>
+<span class="badge badge-pill badge-primary"><ul>
+  <li><a href='/'>Top</a></li>
+  <li><a href='/hello'>Hello</a></li>
+  <li><a href='/place/lagoon'>Place</a></li>
+</ul></span>
+
+<form action ="/post" method="POST">
+  　名前：<input type="text" name="user_name">
+  　メアド：<input type="email" name="user_email">
+  　投稿：<input type="text" name="user_message">
+   <input type="submit">
+
+   <p>投稿内容</p>
+   <% @res.each do |item| %>
+     <p>
+       name: <%= item %>
+
+
+
+      </p>
+   <% end %>
+
+</form>

@@ -1,0 +1,9 @@
+<h1>Upload Image</h1>
+
+<form action="/image" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <input type="submit" value="Upload image">
+</form>
+<% @images.each do|image| %>
+  <img src="/images/<%= image %>" width='300' height='300' />
+<% end %>
